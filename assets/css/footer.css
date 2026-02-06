@@ -1,0 +1,27 @@
+/* Footer Styles */
+footer {
+    background-color: var(--footer-bg-color);
+    color: #f3f4f6;
+    padding: 2rem 0;
+}
+
+footer p {
+    font-size: 0.85rem;
+}
+
+.footer-links a {
+    transition: all 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff !important; /* Brightens text on hover */
+    padding-left: 5px; /* Subtle slide effect */
+}
+
+.footer-links i {
+    transition: transform 0.2s ease;
+}
+
+.footer-links a:hover i {
+    transform: translateX(2px); /* Moves the arrow slightly on hover */
+}

@@ -1,0 +1,644 @@
+/* Custom styles */
+:root {
+    --primary-color: #1a4480;    /* Deep navy blue */
+    --secondary-color: #2c608f;  /* Lighter blue */
+    --accent-color: #d83933;     /* Government red */
+    --text-color: #1b1b1b;       /* Dark text */
+    --light-bg: #ffffff;         /* White background */
+    --border-color: #dfe1e2;     /* Border color */
+    --shadow: 0 1px 3px rgba(0,0,0,0.08); /* Subtle shadow */
+    --header-bg-gradient: linear-gradient(to right, #15305b, #1a4480);
+    --footer-bg-color: #1f2937;
+    --secondary-button-color: #2563eb; /* Blue color for Login button/border */
+}
+
+body {
+    font-family: -apple-system, BlinkMacMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: var(--text-color);
+    background-color: #F8F9FA;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Hero Section with background image */
+.hero-section {
+    position: relative;
+    background: url('../images/banner-bg.jpg') center center / cover no-repeat;
+    color: #ffffff;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55); /* Dark overlay so text is readable */
+    z-index: 0;
+}
+
+.hero-section header {
+    position: relative;
+    z-index: 10; /* Keep navbar above banner content */
+}
+
+.hero-section .banner-placeholder {
+    position: relative;
+    z-index: 1; /* Keep content above overlay */
+}
+
+/* Header / Navbar Styles */
+header {
+    background-color: transparent; /* Let background image show through */
+    border-bottom: none;
+    color: #ffffff;
+}
+
+header .container {
+    flex-wrap: nowrap;
+    position: relative;
+    z-index: 10;
+}
+
+.main-nav {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    position: relative;
+    z-index: 10;
+}
+
+.meghalaya-logo {
+    height: 100px;
+}
+
+.brand-text {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.main-menu .nav-link {
+    color: #ffffff;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: 600;
+}
+
+.main-menu .nav-link:hover,
+.main-menu .nav-link.active {
+    color: #ffffff;
+}
+
+.main-menu .dropdown-toggle::after {
+    margin-left: 0.5rem;
+    vertical-align: 0.2em;
+}
+
+.main-menu .dropdown-menu {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin-top: 0.5rem;
+    z-index: 1000; /* Ensure dropdown appears above all content */
+}
+
+.main-menu .dropdown-item {
+    text-transform: none;
+    font-size: 0.9rem;
+    padding: 0.75rem 1.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.main-menu .dropdown-item:hover {
+    background-color: #1f2937;
+    color: #ffffff;
+}
+
+/* Responsive navbar */
+@media (max-width: 991.98px) {
+    .main-nav .container {
+        flex-wrap: wrap;
+    }
+
+    .main-menu {
+        margin-top: 0.75rem;
+        justify-content: flex-start !important;
+        row-gap: 0.25rem;
+    }
+
+    .main-menu .nav-link {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .meghalaya-logo {
+        height: 32px;
+    }
+
+    .brand-text {
+        font-size: 0.9rem;
+    }
+
+    .main-menu {
+        flex-wrap: wrap;
+    }
+}
+
+/* Full-page Banner Placeholder */
+.banner-placeholder {
+    background-color: transparent; /* Use hero background image */
+    height: auto; /* Increased height */
+    position: relative;
+    overflow: hidden; /* Ensure overflow is hidden for inner elements */
+    padding-top: 60px; /* Push content down */
+}
+
+.banner-placeholder .container {
+    height: 100%; /* Ensure the container takes full height */
+    padding-top: 0px; /* Additional padding to push content down */
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.banner-placeholder .row {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.banner-placeholder h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.banner-placeholder h2 {
+    font-size: 2.2rem; /* Adjusted from 2.8rem */
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+
+.banner-placeholder p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+.banner-placeholder .btn {
+    margin-top: 1.5rem;
+    padding: 0.75rem 2.5rem;
+    font-size: 1.25rem;
+    border-radius: 50px;
+}
+
+.service-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    padding-right: 20px; /* Space for the vertical line */
+}
+
+.service-list::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background-color: white; /* White vertical line */
+    border-radius: 2px;
+}
+
+.service-item {
+    font-size: 1.5rem; /* Adjusted from 1.8rem */
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    color: #87CEEB; /* Light blue color for the text */
+    text-align: right;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.service-item:hover {
+    color: #ADD8E6; /* Slightly lighter blue on hover */
+}
+
+/* Online Services Section */
+.online-services .section-title,
+.how-to-apply .section-title,
+.charts-section .card-title {
+    color: var(--primary-color);
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.online-services .section-title::after,
+.how-to-apply .section-title::after,
+.charts-section .card-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+.service-card {
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-color: var(--accent-color);
+}
+
+.service-icon {
+    color: var(--primary-color);
+}
+
+/* How to Apply Section */
+.how-to-apply .section-title {
+    margin-bottom: 3rem !important;
+}
+
+.timeline-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline-step {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    padding: 1.5rem 1rem;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 180px; /* Increased height for better look */
+    transition: all 0.3s ease;
+}
+
+.timeline-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Arrow shape using pseudo-elements */
+.timeline-step::before,
+.timeline-step::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 30px; /* Width of the arrow point */
+    background: inherit;
+    height: 100%;
+    z-index: 1;
+}
+
+.timeline-step::before {
+    left: -15px;
+    transform: skewX(-20deg);
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+}
+
+.timeline-step::after {
+    right: -15px;
+    transform: skewX(20deg);
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+/* Overlap for the arrow effect */
+.timeline-step + .timeline-step::before {
+    left: -30px;
+    z-index: 2;
+}
+
+.timeline-step:first-child {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.timeline-step:last-child {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.timeline-step .step-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+    position: relative;
+    z-index: 3;
+}
+
+.timeline-step .step-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    position: relative;
+    z-index: 3;
+}
+
+.timeline-step .step-description {
+    font-size: 0.8rem;
+    opacity: 0.9;
+    position: relative;
+    z-index: 3;
+}
+
+.timeline-step .step-icon {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    position: relative;
+    z-index: 3;
+}
+
+/* Responsive adjustments for timeline */
+@media (max-width: 991px) {
+    .timeline-container {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem 0;
+    }
+
+    .timeline-step {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 1rem;
+        border-radius: 12px !important; /* Ensure rounded corners on smaller screens */
+    }
+
+    .timeline-step::before,
+    .timeline-step::after {
+        display: none; /* Hide arrows on smaller screens */
+    }
+}
+
+/* Remove old .apply-step styles */
+.apply-step {
+    display: none; 
+}
+
+
+/* Charts Section */
+.charts-section .card {
+    border-top: 3px solid var(--primary-color);
+}
+
+.charts-section .chart-value {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+/* General Bootstrap Overrides/Adjustments */
+.btn-primary {
+    background-color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+}
+
+.btn-primary:hover {
+    background-color: #b73229 !important;
+    border-color: #b73229 !important;
+}
+
+.btn-outline-secondary {
+    border-color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.btn-light {
+    background-color: var(--light-bg) !important;
+    border-color: var(--secondary-button-color) !important;
+    color: var(--secondary-button-color) !important;
+}
+
+.btn-light:hover {
+    background-color: var(--secondary-button-color) !important;
+    color: white !important;
+}
+
+.dropdown-toggle::after {
+    vertical-align: middle;
+}
+
+.dropdown-menu {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: none;
+}
+
+.dropdown-item {
+    padding: 0.75rem 1.25rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.dropdown-item:hover {
+    background-color: #e9ecef;
+    color: var(--primary-color);
+}
+
+/* Registration Type Cards */
+.registration-type-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    min-height: 120px;
+}
+
+.registration-type-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2) !important;
+}
+
+.registration-type-card .card-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-type-card h6 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+}
+
+.registration-type-card h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.registration-type-card small {
+    font-size: 0.75rem;
+    opacity: 0.85;
+}
+
+/* Core Layout Styling */
+.min-vh-75 { min-height: 75vh; }
+
+.icon-box {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f4f8;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+}
+
+.link-hover:hover {
+    color: #0d6efd !important;
+}
+
+/* The Angled Image Mask */
+.angled-image-container {
+    height: 100%;
+    width: 100%;
+    /* This creates the diagonal cut on the left side of the image */
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+    overflow: hidden;
+}
+
+@media (max-width: 991px) {
+    .angled-image-container {
+        clip-path: none; /* Remove angle on mobile for standard look */
+        height: 350px;
+    }
+}
+
+/* Custom Red for CTA to match your footer */
+.btn-danger {
+    background-color: #e63946;
+    border: none;
+    transition: transform 0.2s ease;
+}
+
+.btn-danger:hover {
+    background-color: #d62839;
+    transform: translateY(-2px);
+}
+
+.news-overlay-card.top-align {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 320px; /* Slightly wider to accommodate wrapped text */
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 10;
+}
+
+/* Allow text to wrap and handle link styling */
+.news-link {
+    transition: all 0.2s ease;
+}
+
+.news-link span {
+    display: block;
+    line-height: 1.5;
+    word-wrap: break-word; /* Ensures long words don't break the box */
+}
+
+.news-link:hover {
+    background: rgba(255, 255, 255, 0.05);
+    padding-left: 5px; /* Subtle slide effect on hover */
+}
+
+.news-link:hover span {
+    color: #ffffff !important; /* Brighten text on hover */
+}
+
+/* Adjustments for mobile */
+@media (max-width: 991px) {
+    .news-overlay-card.top-align {
+        width: 90%;
+        left: 5%;
+        right: auto;
+    }
+}
+
+.partners-scroll-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 20px 5px;
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.partners-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.partner-item {
+    flex: 0 0 250px; /* Fixed width for each item */
+    height: 120px;
+}
+
+.gray-scale {
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.partner-item:hover .gray-scale {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.btn-outline-dark {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
