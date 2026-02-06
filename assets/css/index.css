@@ -619,9 +619,27 @@ header .container {
     display: none;
 }
 
+#partnerScroll {
+    display: flex;
+    flex-wrap: nowrap; /* Crucial: Keeps items in a single horizontal line */
+    overflow-x: hidden; /* Hides the scrollbar so the buttons do the work */
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 20px 0;
+}
+
 .partner-item {
-    flex: 0 0 250px; /* Fixed width for each item */
+    flex: 0 0 180px; /* Fixed width for each item */
     height: 120px;
+}
+
+.partner-item img {
+    max-height: 100%; /* Image won't grow taller than the card */
+    max-width: 100%;  /* Image won't grow wider than the card */
+    width: auto;      /* Maintains aspect ratio */
+    height: auto;     /* Maintains aspect ratio */
+    object-fit: contain; /* Shrinks the image to fit without cropping */
+    padding: 2px;    /* Adds a little breathing room inside the card */
 }
 
 .gray-scale {
