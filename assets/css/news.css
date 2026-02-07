@@ -1,0 +1,23 @@
+.news-item {
+    transition: transform 0.2s ease;
+}
+
+.hover-border-danger {
+    border-left: 4px solid #f8f9fa !important;
+    transition: all 0.3s ease;
+}
+
+.hover-border-danger:hover {
+    border-left-color: #dc3545 !important;
+    background-color: #fffdfd;
+}
+
+.pagination .page-link {
+    color: #1a2533;
+    border-radius: 0;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}

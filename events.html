@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | Shillong Cricket Association - Official Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .main-nav { background-color: #1a2533; }
+        /* Custom Styling for the Contact Form */
+        .contact-card { border-radius: 0; border: none; }
+        input, textarea, select { border-radius: 0 !important; }
+        input:focus, textarea:focus { border-color: #dc3545 !important; box-shadow: none !important; }
+    </style> 
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/news.css" rel="stylesheet">
+    <link href="assets/css/events.css" rel="stylesheet">
+</head> 
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main class="container py-5 my-5">
+
+        <section>
+            <div class="row mb-5 align-items-end">
+                <div class="col-md-6">
+                    <h2 class="fw-bold text-uppercase mb-0">Events &amp; Programmes</h2>
+                    <div class="bg-danger mt-2" style="height: 3px; width: 60px;"></div>
+                </div>
+            </div>
+
+            <!-- Search Field -->
+            <div class="row mb-4">
+                <div class="col-12 d-flex justify-content-end">
+                    <div class="input-group shadow-sm" style="max-width: 400px;">
+                        <span class="input-group-text bg-white border-end-0 rounded-0">
+                            <i class="fas fa-search text-danger"></i>
+                        </span>
+                        <input type="text" id="eventsSearch" class="form-control border-start-0 rounded-0 py-2" placeholder="Search events...">
+                    </div>
+                </div>
+                <div class="col-12 text-end">
+                    <div id="searchCount" class="small text-muted mt-2" style="display:none;"></div>
+                </div>
+            </div>
+        
+            <!-- EVENTS LIST -->
+            <div class="row g-4" id="events-list">
+
+                <div class="col-md-6 event-item">
+                    <div class="card border-0 shadow-sm overflow-hidden h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-4 bg-dark d-flex align-items-center justify-content-center text-white p-3 text-center">
+                                <div><h2 class="fw-bold mb-0">14</h2><small class="text-uppercase">Jun 2026</small></div>
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="fw-bold">UPCOMING: Summer Training Camp 2026</h5>
+                                    <p class="text-muted small">SCA is organizing Summer Training Camp 2026 for U-19 at Shillong. Interested candidates may apply before 31st May 2026.</p>
+                                    <a href="assets/docs/sample.pdf" target="_blank" class="btn btn-sm btn-outline-danger rounded-0">
+                                        <i class="fas fa-file-pdf me-1"></i> VIEW DETAILS
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 event-item">
+                    <div class="card border-0 shadow-sm overflow-hidden h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-4 bg-dark d-flex align-items-center justify-content-center text-white p-3 text-center">
+                                <div><h2 class="fw-bold mb-0">07</h2><small class="text-uppercase">Feb 2026</small></div>
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="fw-bold">Event Management Workshop</h5>
+                                    <p class="text-muted small">Workshop on Sports Event Management conducted by SCA at State Convention Center, Shillong.</p>
+                                    <a href="assets/docs/sample.pdf" target="_blank" class="btn btn-sm btn-outline-danger rounded-0">
+                                        <i class="fas fa-file-pdf me-1"></i> VIEW REPORT
+                                    </a>
+                                    <button class="btn btn-sm btn-danger rounded-0 px-3" onclick="openGallery('super_cup_2025', 4)">
+                                        <i class="fas fa-camera me-1"></i> VIEW PHOTOS
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 event-item">
+                    <div class="card border-0 shadow-sm overflow-hidden h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-4 bg-dark d-flex align-items-center justify-content-center text-white p-3 text-center">
+                                <div><h2 class="fw-bold mb-0">12</h2><small class="text-uppercase">Jan 2026</small></div>
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="fw-bold">SCA Super Cup 2025</h5>
+                                    <p class="text-muted small">Final match highlights and trophy ceremony.</p>
+                                    <button class="btn btn-sm btn-danger rounded-0 px-3" onclick="openGallery('super_cup_2025', 4)">
+                                        <i class="fas fa-camera me-1"></i> VIEW PHOTOS
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 event-item">
+                    <div class="card border-0 shadow-sm overflow-hidden h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-4 bg-dark d-flex align-items-center justify-content-center text-white p-3 text-center">
+                                <div><h2 class="fw-bold mb-0">21</h2><small class="text-uppercase">Nov 2025</small></div>
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="fw-bold">Training Camp at Sohra</h5>
+                                    <p class="text-muted small">Training Camp conducted by SCA at Sohra.</p>
+                                    <button class="btn btn-sm btn-danger rounded-0 px-3" onclick="openGallery('super_cup_2025', 4)">
+                                        <i class="fas fa-camera me-1"></i> VIEW PHOTOS
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 event-item">
+                    <div class="card border-0 shadow-sm overflow-hidden h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-4 bg-dark d-flex align-items-center justify-content-center text-white p-3 text-center">
+                                <div><h2 class="fw-bold mb-0">15</h2><small class="text-uppercase">Feb 2026</small></div>
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="fw-bold">Event Management Workshop</h5>
+                                    <p class="text-muted small">Workshop on Sports Event Management conducted by SCA at State Convention Center, Shillong.</p>
+                                    <a href="assets/docs/sample.pdf" target="_blank" class="btn btn-sm btn-outline-danger rounded-0">
+                                        <i class="fas fa-file-pdf me-1"></i> VIEW REPORT
+                                    </a>
+                                    <button class="btn btn-sm btn-danger rounded-0 px-3" onclick="openGallery('super_cup_2025', 4)">
+                                        <i class="fas fa-camera me-1"></i> VIEW PHOTOS
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 event-item">
+                    <div class="card border-0 shadow-sm overflow-hidden h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-4 bg-dark d-flex align-items-center justify-content-center text-white p-3 text-center">
+                                <div><h2 class="fw-bold mb-0">15</h2><small class="text-uppercase">Feb 2026</small></div>
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="fw-bold">SCA Super Cup 2025</h5>
+                                    <p class="text-muted small">Final match highlights and trophy ceremony.</p>
+                                    <button class="btn btn-sm btn-danger rounded-0 px-3" onclick="openGallery('super_cup_2025', 4)">
+                                        <i class="fas fa-camera me-1"></i> VIEW PHOTOS
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 event-item">
+                    <div class="card border-0 shadow-sm overflow-hidden h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-4 bg-dark d-flex align-items-center justify-content-center text-white p-3 text-center">
+                                <div><h2 class="fw-bold mb-0">15</h2><small class="text-uppercase">Feb 2026</small></div>
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="fw-bold">Training Camp at Sohra</h5>
+                                    <p class="text-muted small">Training Camp conducted by SCA at Sohra.</p>
+                                    <button class="btn btn-sm btn-danger rounded-0 px-3" onclick="openGallery('super_cup_2025', 4)">
+                                        <i class="fas fa-camera me-1"></i> VIEW PHOTOS
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 event-item">
+                    <div class="card border-0 shadow-sm overflow-hidden h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-4 bg-dark d-flex align-items-center justify-content-center text-white p-3 text-center">
+                                <div><h2 class="fw-bold mb-0">15</h2><small class="text-uppercase">Feb 2026</small></div>
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="fw-bold">Event Management Workshop</h5>
+                                    <p class="text-muted small">Workshop on Sports Event Management conducted by SCA at State Convention Center, Shillong.</p>
+                                    <a href="assets/docs/sample.pdf" target="_blank" class="btn btn-sm btn-outline-danger rounded-0">
+                                        <i class="fas fa-file-pdf me-1"></i> VIEW REPORT
+                                    </a>
+                                    <button class="btn btn-sm btn-danger rounded-0 px-3" onclick="openGallery('super_cup_2025', 4)">
+                                        <i class="fas fa-camera me-1"></i> VIEW PHOTOS
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 event-item">
+                    <div class="card border-0 shadow-sm overflow-hidden h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-4 bg-dark d-flex align-items-center justify-content-center text-white p-3 text-center">
+                                <div><h2 class="fw-bold mb-0">15</h2><small class="text-uppercase">Feb 2026</small></div>
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="fw-bold">SCA Super Cup 2025</h5>
+                                    <p class="text-muted small">Final match highlights and trophy ceremony.</p>
+                                    <button class="btn btn-sm btn-danger rounded-0 px-3" onclick="openGallery('super_cup_2025', 4)">
+                                        <i class="fas fa-camera me-1"></i> VIEW PHOTOS
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 event-item">
+                    <div class="card border-0 shadow-sm overflow-hidden h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-4 bg-dark d-flex align-items-center justify-content-center text-white p-3 text-center">
+                                <div><h2 class="fw-bold mb-0">15</h2><small class="text-uppercase">Feb 2026</small></div>
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="fw-bold">Training Camp at Sohra</h5>
+                                    <p class="text-muted small">Training Camp conducted by SCA at Sohra.</p>
+                                    <button class="btn btn-sm btn-danger rounded-0 px-3" onclick="openGallery('super_cup_2025', 4)">
+                                        <i class="fas fa-camera me-1"></i> VIEW PHOTOS
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 event-item">
+                    <div class="card border-0 shadow-sm overflow-hidden h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-4 bg-dark d-flex align-items-center justify-content-center text-white p-3 text-center">
+                                <div><h2 class="fw-bold mb-0">15</h2><small class="text-uppercase">Feb 2026</small></div>
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="fw-bold">Event Management Workshop</h5>
+                                    <p class="text-muted small">Workshop on Sports Event Management conducted by SCA at State Convention Center, Shillong.</p>
+                                    <button class="btn btn-sm btn-danger rounded-0 px-3" onclick="openGallery('super_cup_2025', 4)">
+                                        <i class="fas fa-camera me-1"></i> VIEW PHOTOS
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        
+            <nav class="mt-5">
+                <ul class="pagination justify-content-center" id="event-pagination">
+                    </ul>
+            </nav>
+        </section>
+        
+        <!-- Photos Modal -->
+        <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-0 pb-0">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <img src="" id="galleryImage" alt="Event Photo">
+                        
+                        <button class="gallery-nav-btn position-absolute top-50 start-0 translate-middle-y" onclick="changeImage(-1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="gallery-nav-btn position-absolute top-50 end-0 translate-middle-y" onclick="changeImage(1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="modal-footer border-0 justify-content-center pt-0">
+                        <div id="imageCounter" class="text-white-50 small"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/events.js"></script>
+    <script>
+        $(function(){
+            $("#header-placeholder").load("assets/fragments/header.html");
+            $("#footer-placeholder").load("assets/fragments/footer.html");
+        });
+    </script>
+</body>
+</html>

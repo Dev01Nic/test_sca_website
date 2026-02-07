@@ -1,0 +1,64 @@
+/* Force the modal dialog to take up a large portion of the screen */
+#galleryModal .modal-dialog {
+    max-width: 90vw; /* 90% of viewport width */
+    margin: 1.75rem auto;
+}
+
+/* Fix the modal content height to the viewport */
+#galleryModal .modal-content {
+    height: 85vh; /* 85% of viewport height */
+    background-color: #000; /* True black background for photos */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure the body containing the image fills the remaining space */
+#galleryModal .modal-body {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* No scrollbars */
+    position: relative;
+}
+
+/* The Magic: Image resizing logic */
+#galleryImage {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Shrinks to fit without cropping */
+}
+
+/* Style the navigation buttons so they are always visible over the black background */
+.gallery-nav-btn {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 20px;
+    transition: background 0.3s;
+    z-index: 10;
+}
+
+.gallery-nav-btn:hover {
+    background: rgba(220, 53, 69, 0.8); /* SCA Red on hover */
+}
+
+#galleryImage {
+    background: url('/assets/images/loader.gif') no-repeat center;
+}
+
+#event-pagination .page-item.active .page-link {
+    background-color: #dc3545 !important; /* SCA Red */
+    color: white !important;
+}
+
+#event-pagination .page-link:hover {
+    background-color: #f8f9fa;
+    color: #dc3545;
+}
+
+/* .event-item {
+    display: none; /* Hidden by default, shown by jQuery * /
+} */
