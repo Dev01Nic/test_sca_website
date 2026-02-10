@@ -17,7 +17,7 @@ window.openGallery = function(folderName, count, element) {
 }
 
 function updateModalImage() {
-    const imagePath = `/assets/gallery/photos/${currentEvent}/${currentImgIdx}.jpg`;
+    const imagePath = `assets/gallery/photos/${currentEvent}/${currentImgIdx}.jpg`;
     $('#galleryImage').attr('src', imagePath);
     
     // Update both Title and Counter
