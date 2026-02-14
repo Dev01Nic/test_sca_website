@@ -690,3 +690,27 @@ footer p {
 .footer-links a:hover i {
     transform: translateX(2px); /* Moves the arrow slightly on hover */
 }
+
+.league-card {
+    transition: all 0.3s ease;
+}
+
+.league-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.league-icon-circle {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+.league-card h5 {
+    color: #1a2533;
+    margin-bottom: 15px;
+}

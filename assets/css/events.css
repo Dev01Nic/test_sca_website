@@ -1,13 +1,13 @@
 /* Force the modal dialog to take up a large portion of the screen */
 #galleryModal .modal-dialog {
-    max-width: 90vw; /* 90% of viewport width */
+    max-width: 75vw; /* 90% of viewport width */
     margin: 1.75rem auto;
 }
 
 /* Fix the modal content height to the viewport */
 #galleryModal .modal-content {
     height: 85vh; /* 85% of viewport height */
-    background-color: #000; /* True black background for photos */
+    background-color: rgba(0, 0, 0, .90);
     display: flex;
     flex-direction: column;
 }
